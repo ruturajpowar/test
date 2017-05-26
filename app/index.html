@@ -94,7 +94,15 @@
     <!-- endbuild -->
     
     <!-- build:js scripts/main.js -->
-    <script src="scripts/main.js"></script>
+   
+     <h1>Hello <span id="foo"></span></h1>
+        <script data-main="scripts/main" src="scripts/require.js"></script>
+        <script>
+            _require(['main'], function () {
+              console.log("in resssssssssssssssss");
+                _require(['page/home']);
+            });
+        </script>
     <!-- endbuild -->
   </body>
 </html>
